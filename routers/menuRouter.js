@@ -11,6 +11,7 @@ router.get("/once", (req, res, next) => {
     connection.query("INSERT INTO `plat` VALUES (1,'Steak tartare','Parce que un steak tout court c\'est trop bon donc autant le gacher',5),(2,'Raclette','Avec un peu de Javel',5),(3,'Pizza façon Anthony','Tout est dit',5),(4,'Navarin de mouton','Parce que dire ragoût dégoûte',5),(5,'Gratin dauphinois','Un plat qui va vous satisfaire',5);");
     connection.query("INSERT INTO `dessert` VALUES (1,'Parfait à la fraise','Pas si parfait que ça',5),(2,'Clafouti au nutella','De l\'huile de palme encore et encore',6),(3,'Crumble aux pommes','Parce que les pommes c\'est la vie',7),(4,'Crèpe','Une crèpe, nature biensûr',8),(5,'Glace 2 boules','Parce que les glaces 2 boules sont les meilleures',9);");
     connection.query("INSERT INTO `menu` VALUES (1,1,1,1),(2,2,2,2),(3,3,3,3),(4,4,4,4),(5,5,5,5);");
+    res.send('OK');
 });
 
 router.get("/menu", (req, res, next) => {
