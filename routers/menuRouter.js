@@ -4,9 +4,9 @@ const connection = require('../db/database');
 
 router.get("/once", (req, res, next) => {
     // connection.query('CREATE TABLE entree(id_entree INT AUTO_INCREMENT PRIMARY KEY,nom VARCHAR(255),descr VARCHAR(255),prix INT);');
-    connection.query('CREATE TABLE plat(id_plat INT AUTO_INCREMENT PRIMARY KEY,nom VARCHAR(255),descr VARCHAR(255),prix INT);');
-    connection.query('CREATE TABLE dessert(id_dessert INT AUTO_INCREMENT PRIMARY KEY,nom VARCHAR(255),descr VARCHAR(255),prix INT);');
-    connection.query('CREATE TABLE menu(id_menu INT AUTO_INCREMENT PRIMARY KEY,id_entree INT,id_plat INT,id_dessert INT,FOREIGN KEY (id_entree) REFERENCES entree (id_entree),FOREIGN KEY (id_plat) REFERENCES plat (id_plat),FOREIGN KEY (id_dessert) REFERENCES dessert (id_dessert));');
+    //connection.query('CREATE TABLE plat(id_plat INT AUTO_INCREMENT PRIMARY KEY,nom VARCHAR(255),descr VARCHAR(255),prix INT);');
+    //connection.query('CREATE TABLE dessert(id_dessert INT AUTO_INCREMENT PRIMARY KEY,nom VARCHAR(255),descr VARCHAR(255),prix INT);');
+    //connection.query('CREATE TABLE menu(id_menu INT AUTO_INCREMENT PRIMARY KEY,id_entree INT,id_plat INT,id_dessert INT,FOREIGN KEY (id_entree) REFERENCES entree (id_entree),FOREIGN KEY (id_plat) REFERENCES plat (id_plat),FOREIGN KEY (id_dessert) REFERENCES dessert (id_dessert));');
     connection.query("INSERT INTO `entree` VALUES (1,'Salade de chèvre chaud','Parce qu\'il faut bien la cramer la biquette',5),(2,'Tartare de saumon et d’avocat','Avec un avocat puisqu\'il a été pris en excés de vitesse dans la Deule',5),(3,'Aumônière de foie gras','Gras mais pas trop quand même',5),(4,'Carpaccio de Saint Jacques aux truffes','Concocté par Jacques lui-même',5),(5,'Escargots à l’ail gratinés','Vous y trouverez quelques limaces par manque de fonds',5),(6,'Macédoine','Provenant de Skopje',10);");
     connection.query("INSERT INTO `plat` VALUES (1,'Steak tartare','Parce que un steak tout court c\'est trop bon donc autant le gacher',5),(2,'Raclette','Avec un peu de Javel',5),(3,'Pizza façon Anthony','Tout est dit',5),(4,'Navarin de mouton','Parce que dire ragoût dégoûte',5),(5,'Gratin dauphinois','Un plat qui va vous satisfaire',5);");
     connection.query("INSERT INTO `dessert` VALUES (1,'Parfait à la fraise','Pas si parfait que ça',5),(2,'Clafouti au nutella','De l\'huile de palme encore et encore',6),(3,'Crumble aux pommes','Parce que les pommes c\'est la vie',7),(4,'Crèpe','Une crèpe, nature biensûr',8),(5,'Glace 2 boules','Parce que les glaces 2 boules sont les meilleures',9);");
