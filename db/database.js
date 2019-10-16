@@ -1,6 +1,6 @@
 const mysql = require ('mysql2');
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: 'eu-cdbr-west-02.cleardb.net',
     user: 'b99a005133c9fb',
     password: '242cb621',
